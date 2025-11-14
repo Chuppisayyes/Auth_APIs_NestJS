@@ -3,7 +3,7 @@ import { AppModule } from './app.module';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 async function bootstrap() { // Khởi tạo hàm chính chạy ứng dụng nestjs
   const app = await NestFactory.create(AppModule); // khởi tạo toàn bộ ứng dụng
-  app.enableCors({origin:"*"}); // CORS() cho phép FE truy cập vào BE
+  app.cors
   const config = new DocumentBuilder() //tạo đối tượng cấu hình Swagger.
     .setTitle('Auth - APIs') //đặt tiêu đề cho trang Swagger UI.
     .setDescription('Full apis auth by Teocoder - 2025') //mô tả API.
